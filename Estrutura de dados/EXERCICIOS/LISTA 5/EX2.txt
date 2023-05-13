@@ -1,0 +1,3 @@
+O que significa alocação sequencial de memória para um conjunto de elementos? 
+
+R:  Alocação de memória, em ciência da computação, consiste no processo de solicitar/utilizar memória durante o processo de execução de um programa de computador. A alocação sequencial não é necessariamente alocada em sequência fisicamente.

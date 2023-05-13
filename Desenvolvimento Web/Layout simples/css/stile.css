@@ -1,0 +1,118 @@
+body{
+   background-color: #a7938e; 
+}
+nav{
+   text-align: center;
+    margin: 0 auto;
+    width: 970px;
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 150px; 
+    border: 2px solid #680a0a;
+    background-color: #573429;  
+    border-radius: 2px;
+    border-radius: 2px;
+ }
+ header{
+   text-align: center;
+   margin: 0 auto;
+   width: 970px;
+   margin-top: 15px;
+   border-radius: 4px;
+   height: 150px; 
+   border: 2px solid #680a0a;
+   background-color: #6c352f;  
+   border-radius: 2px;
+   border-radius: 2px;
+}
+footer{
+   text-align: center;
+   margin: 0 auto;
+   width: 970px;
+   margin-top: 15px;
+   border-radius: 4px;
+   height: 150px; 
+   border: 2px solid #680a0a;
+   background-color: #087dff;  
+   border-radius: 2px;
+   border-radius: 2px;
+}
+ div{  
+   text-align: center;
+    margin: 0 auto;
+    width: 970px;
+    margin-top: 15px;
+    border: 2px solid #680a0a;
+    height: 400px; 
+    background-color: #acf4fa;
+    border-radius: 2px;
+    border-radius: 2px;
+ }
+
+table{
+   color: #000000;
+   border: 3px solid #a7938e;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+} 
+
+table.a {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #a7938e;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}  
+
+table.b {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #573429;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}  
+table.c {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #6c352f;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}  
+table.d {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #087dff;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}  
+table.e {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #acf4fa;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}
+table.f {
+   width: 500px;
+   color: #000000;
+   border: 3px solid #1e110d;
+   border-radius: 5px;
+   background-color: #ffffff;
+   margin: 0 auto;
+   text-align: center
+}
+
+ 
+ 

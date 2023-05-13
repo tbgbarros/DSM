@@ -1,0 +1,41 @@
+AULA 2
+
+SELECT descricao, precodevenda
+FROM produto
+WHERE precodevenda > AVG (precodevenda);
+
+SELECT AVG(precodevenda)
+FROM produto;
+
+
+SELECT descricao, precodevenda
+FROM produto
+WHERE precodevenda > (SELECT AVG(precodevenda)
+							FROM produto)
+							
+							
+SELECT nome
+FROM	empregado
+WHERE salario >= (SELECT MIN(salario)
+						FROM cargo)
+
+SELECT nome, salario
+FROM	empregado
+WHERE salario >= (SELECT MIN(salario)
+						FROM cargo)
+
+SELECT nome, salario
+FROM	empregado
+WHERE salario >= (SELECT MIN(salario)
+						FROM cargo)
+		AND salario <= (SELECT MAX(salario)
+								FROM cargo)
+
+/*todos os produto vendido*/
+SELECT descricao, estoque
+FROM produto
+WHERE id IN  (SELECT idproduto 
+FROM itemvenda	)	
+/* IN usado para varias linhas de retorno de informacoes*/									
+
+								

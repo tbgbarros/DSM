@@ -1,0 +1,56 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/09/2022
+Var
+// Seção de Declarações das variáveis 
+anoatual, anonascimento, tiponatacao: real
+nome: caracter
+codigo : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreval ("Digite nome do atleta")
+leia(nome)
+escreval("Digite o ano atual")
+leia (anoatual)
+escreval("Digite o ano do nascimento")
+leia (anonascimento)
+escreval("Informe o tipo de natacao")
+escreval("1 - Nado Livre")
+escreval("2 - Nado de Costas")
+escreval("3 - Nado Borboleta")
+leia (tiponatacao)
+
+idade :=  anoatual - anonascimento
+
+se ( tiponatacao = 1 ) e (idade <=16 )
+ entao
+   escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está com indice de Magreza")
+senao
+   se (imc >= 18) e (imc < 25) entao
+      escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está Normal")
+   senao
+        se(imc >= 25) e (imc < 30)  entao
+               escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está com Sobrepeso")
+        senao
+             se (imc >= 30) e (imc < 35) entao
+                escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está com Obesidade gra I")
+             senao
+                  se (imc >= 35) e (imc <= 40) entao
+                     escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está com Obesidade Grau II")
+                  senao
+                     se (imc > 40)  entao
+                        escreval("Olá ", nome , "seu IMC é " , imc:2:2 , " na classificação de obesidade voce está com Obesidade Grave ou Mórbida)")
+                 fimse
+               fimse
+            fimse
+        fimse
+   fimse
+fimse
+
+escreval ("Olá ", nome , "seu IMC é" , imc , " na classificação de obesidade voce está " , )
+
+Fimalgoritmo

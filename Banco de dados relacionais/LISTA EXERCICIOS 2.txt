@@ -1,0 +1,91 @@
+EX1
+
+SELECT a.nome, b.nome 
+FROM cliente a, representante b WHERE a.idrepresentante=b.id  
+
+EX2
+
+SELECT a.id, a.datemissao, b.nome, c.descricao
+FROM venda a, cliente b, formapagto c 
+WHERE a.idcliente = b.id
+AND a.idformapagto = c.id
+AND a.id = (SELECT MAX(id)
+				FROM venda)
+				
+EX3
+
+SELECT a.id, a.datemissao, b.nome, c.descricao
+FROM venda a, cliente b, formapagto c 
+WHERE a.idcliente = b.id
+AND a.idformapagto = c.id
+AND a.id < (SELECT MAX(id)
+			FROM venda)
+ORDER BY a.id
+
+EX4
+
+SELECT a.id, a.datemissao, b.nome, b.telefone
+FROM venda a, cliente b
+WHERE a.idcliente = b.id
+AND a.datemissao = (SELECT MIN(datemissao)
+				FROM venda)
+
+EX5
+
+SELECT a.id, a.datemissao, b.nome, sum(c.quantidade* c.precounitario)
+FROM venda a, cliente b, itemvenda c
+WHERE c.idvenda = a.id
+GROUP BY a.id, a.datemissao
+
+EX6
+
+SELECT id, descricao, precodecompra, precodevenda,estoque
+FROM produto
+WHERE (id NOT IN (SELECT idproduto FROM itemvenda))
+
+EX7
+
+SELECT id, descricao, precodecompra, precodevenda,estoque
+FROM produto
+WHERE (id IN (SELECT idproduto FROM itemvenda))
+
+EX8 
+
+SELECT v.idcliente, c.nome,
+COUNT(idcliente)
+FROM venda v, cliente c
+WHERE c.id = v.idcliente
+GROUP BY v.idcliente
+
+EX9 
+
+SELECT f.id, f.descricao,
+COUNT(*)
+FROM venda v, cliente c, formapagto f
+WHERE f.id = v.idformapagto
+AND c.id = v.idcliente
+GROUP BY v.idformapagto
+
+EX10
+
+SELECT f.id, f.descricao, v.idformapagto
+FROM venda v INNER JOIN formapagto f
+ON f.id = v.idformapagto
+WHERE datemissao BETWEEN "2019/01/01" AND "2019/06/30"
+
+EX11
+
+SELECT id, nome
+FROM cliente
+WHERE id NOT IN (SELECT idcliente FROM venda)
+
+EX12
+
+SELECT f.id, f.descricao, v.idformapagto
+FROM venda v INNER JOIN formapagto f
+ON f.id = v.idformapagto
+WHERE f.id MAX ( SELECT COUNT (idformapagto) FROM venda
+
+
+
+				

@@ -1,0 +1,150 @@
+Exercício 1
+
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {int cavalo, ferradura;
+
+cout << "quantos cavalos tem em seu aras? \n";
+cin >> cavalo;
+
+ferradura = cavalo * 4;
+
+cout << "seu aras precisa de " << ferradura << " ferradura \n";
+
+
+
+
+return 0;}
+Exercício 2
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	float pfrances,broa, total, poupanca;
+	
+	 cout << "quantos pao(s) frances voce quer? \n";
+	 cin >> pfrances;
+	 cout << "quantas broa(s) voce quer? \n ";
+	 cin >> broa;
+	  pfrances = pfrances * 0.12 ;
+	  broa = broa * 1.50;
+	  total = pfrances + broa;
+	  cout << " o ganho de vendas com pao frances e broa e \n " << total;
+	  poupanca = total * 0.10;
+	  
+	  cout << " o percentual ganho na poupança sera " << poupanca;   
+	
+	return 0;
+}
+Exercício 3
+
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	int cp, cm, cg, total;
+	
+	cout << "quantas camisas pequenas serao fabricadas? \n";
+	cin >> cp;
+	cout << "quantas camisas medias serao fabricadas ? \n";
+	cin >> cm;
+	cout << "quantas camisas grandes serao fabricadas? \n";
+	cin >> cg;
+	
+	cp = cp * 10;
+	cm = cm *12;
+	cg = cg * 15;
+	total = cp + cm + cg;
+	
+	
+	cout << "o total de arrecadaçao e " << total;
+	  
+	
+	return 0;
+}
+
+
+Exercício 4
+
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int op,prato,sobrem,bebida;
+ 
+cout << " informe qual prato  voce quer:  \n";
+cout << " 1 = vegetariano, 2 = peixe, 3 = frango, 4 = carne, 5=nenhuma opcao. \n";
+cin >> prato;
+if (prato == 1){prato = 180;
+cout <<" seu prato tem " << prato << " calorias \n";} else if(prato == 2) {prato = 230;
+cout <<" seu prato tem " << prato << " calorias \n";} else if(prato == 3) {prato = 250;
+cout <<" seu prato tem " << prato << " calorias \n";}  else if(prato == 4) {prato = 350;
+cout <<" seu prato tem " << prato << " calorias \n";} else if (prato == 5){ cout << " voce nao escolheu nenhuma opcao \n";
+} else {cout << "resposta invalida \n";}
+
+cout << "informe qual sobremesa voce quer:  \n ";
+cout << " 1 = abacaxi, 2 = sorvete, diet 3 = mousse, diet 4 = mousse de chocolate, 5 = nenhuma opcao. \n ";
+cin >> sobrem;
+if (sobrem == 1){sobrem = 75; cout << " sua sobremesa tem " << sobrem << " calorias \n"; } 
+else if (sobrem == 2){sobrem = 110; cout << " sua sobremesa tem " << sobrem << " calorias \n"; }
+else if (sobrem == 3){sobrem = 170; cout << " sua sobremesa tem " << sobrem << " calorias \n"; }
+else if (sobrem == 4){sobrem = 200; cout << " sua sobremesa tem " << sobrem << " calorias \n"; }
+else if (sobrem == 5){cout << "voce nao escolheu nenhuma opcao \n"; }
+else {cout << "opcao invalida \n"; }
+
+cout << "informe qual bebida voce quer: \n";
+cout << " 1 = cha, 2 = suco de laranja, 3 = suco de melao, 4 = refrigerante, 5 = nenhuma opcao \n";
+cin >> bebida; 
+
+if (bebida == 1) {bebida = 20; cout << "sua bebida tem " << bebida << " calorias \n"; }
+else if (bebida == 2) {bebida = 70; cout << "sua bebida tem " << bebida << " calorias \n"; }
+else if (bebida == 3) {bebida = 100; cout << "sua bebida tem " << bebida << " calorias \n"; }
+else if (bebida == 4) {bebida = 65; cout << "sua bebida tem " << bebida << " calorias \n"; } 
+else if (bebida == 5){cout << "voce nao escolheu nenhuma opcao \n";}
+else {cout << "opcao invalida";
+}
+return 0;}
+
+exercício 5
+
+#include <iostream>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) { 
+int regiao, viagem, volta;
+
+cout << "qual regiao voce quer ir: \n";
+cout << "1 = norte, 2 = nordeste, 3 = centro-oeste, 4 = sul, 5 = nenhuma opcao \n";
+cin >> regiao;
+if (regiao == 1){regiao = 500; cout << "sua viagem tem o valor de" << regiao << " \n"; cout << "quer incluir a volta? \n"; 
+cout << "s = 1/ n = 2 \n";
+cin >> volta;
+if (volta == 1 ){volta = 900; cout << "sua viagem ida e volta tem o valor de " << volta << "\n";
+}
+}else if (regiao == 2){regiao = 350; cout << "sua viagem tem o valor de" << regiao << " \n"; cout << "quer incluir a volta? \n"; 
+cout << "s = 1/ n = 2 \n";
+cin >> volta;
+if (volta == 1 ){volta = 650; cout << "sua viagem ida e volta tem o valor de " << volta << "\n";
+}else if (regiao == 3){regiao = 350; cout << "sua viagem tem o valor de" << regiao << " \n"; cout << "quer incluir a volta? \n"; 
+cout << "s = 1/ n = 2 \n";
+cin >> volta;
+if (volta == 1 ){volta = 600; cout << "sua viagem ida e volta tem o valor de " << volta << "\n";
+}else if (regiao == 4){regiao = 300; cout << "sua viagem tem o valor de" << regiao << " \n"; cout << "quer incluir a volta? \n"; 
+cout << "s = 1/ n = 2 \n";
+cin >> volta;
+if (volta == 1 ){volta = 550; cout << "sua viagem ida e volta tem o valor de " << volta << "\n";
+} }}}
+return 0;}
+ 
+	

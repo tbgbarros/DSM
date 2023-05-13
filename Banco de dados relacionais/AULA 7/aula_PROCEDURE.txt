@@ -1,0 +1,72 @@
+delimiter $
+	CREATE PROCEDURE SP_SelecionaProdutos(IN qtde int)
+		BEGIN 
+			SELECT id,descricao,estoque
+			FROM produto
+			LIMIT qtde;
+		
+		END $
+delimiter ;
+
+
+delimiter $
+	CREATE PROCEDURE SP_VerificaQtdeProdutos(OUT qtde int)
+		BEGIN 
+			SELECT COUNT(*) INTO qtde 
+			FROM produto;
+		
+		END $
+delimiter ;
+
+CALL SP_VerificaQtdeProdutos(@total);
+SELECT @total;
+ 	
+ 	
+delimiter $
+	CREATE PROCEDURE SP_ElevaQuadrado(INOUT numero int)
+		BEGIN 
+			SET numero = numero * numero;		
+		END $
+delimiter ; 	
+
+SET @total=5;
+CALL SP_ElevaQuadrado(@total);
+SELECT @total;
+
+
+delimiter $
+	CREATE PROCEDURE SP_Somar(IN n1 INT, IN n2 INT, OUT r int)
+		BEGIN 
+			DECLARE resultado INT;
+			SET resultado = n1+n2;
+			SET r = resultado;		
+		END $
+delimiter ; 	
+
+
+CALL SP_Somar(10, 50, @saida);
+SELECT @saida;
+
+
+
+delimiter $
+	CREATE PROCEDURE SP_VerificaQtdeProdutos(OUT qtde int)
+		BEGIN 
+			SELECT COUNT(*) INTO idvenda 
+			FROM itemvenda;
+		
+		END $
+delimiter ;
+
+delimiter $
+	CREATE or replace PROCEDURE SP_SelecionaQtdeVendas()
+		BEGIN 
+			SELECT i.idvenda AS Putaria , COUNT(i.quantidade) AS Quantidade
+			FROM itemvenda i, produto p
+			WHERE i.idvenda = p.id
+			GROUP BY p.id;
+		END $
+delimiter ;
+
+
+CALL SP_SelecionaQtdeVendas();

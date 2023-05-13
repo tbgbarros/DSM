@@ -1,0 +1,33 @@
+
+Titulo: as cronicas
+Autor: jose joaqui,
+Genero: fantasia
+
+Titulo: senhor dos aneis
+Autor: token
+Genero: fantasia
+
+Titulo: sherlock holmes
+Autor: abran
+Genero: fantasia
+
+Titulo: as cronicas
+Autor: jose joaqui,
+Genero: fantasia
+
+Titulo: as cronicas
+Autor: jose joaqui,
+Genero: fantasia
+
+Titulo: as cronicas
+Autor: astronildo
+Genero: fantasia
+
+Titulo: as cronicas
+Autor: token 222
+Genero: fantasia
+  
+Titulo: as minas do ceu
+Autor: desconhecido
+Genero: nuvem
+  

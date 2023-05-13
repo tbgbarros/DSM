@@ -1,0 +1,28 @@
+Algoritmo "exercicio1"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 19/10/2022
+Var
+// Seção de Declarações das variáveis 
+a, b ,c: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+a := 10
+b := 20
+
+se ( a = 10 )  entao
+     c:=a
+fimse
+
+se ( b = 20 )  entao
+     a:=b
+     b:=c
+fimse
+
+escreval ("Conteudo A = ", a , " Conteudo B = ", b)
+
+
+Fimalgoritmo

@@ -1,0 +1,52 @@
+Algoritmo "LER NUMEROS"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/09/2022
+Var
+// Seção de Declarações das variáveis
+num1, num2, num3, num4, media, faltas, recuperacao : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+escreval ("DIGITE A PRIMEIRA NOTA")
+leia(num1)
+escreval ("DIGITE A SEGUNDA NOTA")
+leia(num2)
+escreval ("DIGITE A TERCEIRA NOTA")
+leia(num3)
+escreval ("DIGITE A QUANTIDADE DE FALTAS")
+leia(faltas)
+
+
+
+
+se (faltas > 7) entao
+      escreval ("VOCE ESTA REPROVADO POR FALTAS")
+   senao
+      media := (num1 + num2 + num3)/ 3
+      se (media >= 7 ) entao
+         escreval ("Voce esta Aprovado!!")
+
+   senao
+        se(media >= 3 ) e (media < 7) entao
+          escreval ("Voce esta de recuperacao")
+          escreval ("Digite sua nota de recuperacao")
+
+            leia(num4)
+            media := (num1 + num2 + num3 + num4)/ 4
+            se (media >= 5 ) entao
+              escreval ("Voce esta Aprovado!!")
+            senao
+
+   escreval ("Voce esta Reprovada!!")
+
+            fimse
+        fimse
+      fimse
+   fimse
+     
+
+
+Fimalgoritmo

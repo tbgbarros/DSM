@@ -1,0 +1,556 @@
+Exercicio 1 
+
+using namespace std;
+int main() {
+	int cavalos, ferraduras;
+	
+	cout << "Quantos cavalos foram comprados? \n ";
+	cin >> cavalos;	
+	ferraduras = cavalos * 4;
+	cout << "A quantidade de ferraduras sera:  " << ferraduras;
+	return 0;
+}
+
+
+Exercicio 2
+
+using namespace std;
+int main() {
+	float pao,broa,totaldia,totalpao,totalbroa,poupanca;
+	cout << " Qual a quantidade de paes vendidos:? \n";
+	cin >> pao;
+	cout << " Qual a quantidade de broa vendidas:? \n";
+	cin >> broa;
+	totalpao = pao * 0.12;
+	totalbroa = broa * 1.5;
+	totaldia = totalpao + totalbroa;
+	poupanca = totaldia * 0.1;
+	cout << "\n Total vendido foi: R$" << totaldia;
+	cout << "\n Devera ser guardado na poupanca: R$" << poupanca;
+    return 0;
+}
+
+EXERCICIO 3
+
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	float pequeno,media,grande,total,vp,vm,vg;
+	int camisetasp,camisetasm,camisetasg;
+	vp = 10;
+	vm = 12;
+	vg = 15;
+	cout << "Insira a quantidade de camisetas pequenas: ";
+	cin >> camisetasp;
+	pequeno = camisetasp * vp;
+	cout << "Insira a quantidade de camisetas pequenas: ";
+	cin >> camisetasm;
+	media = camisetasm * vm;
+	cout << "Insira a quantidade de camisetas pequenas: ";
+	cin >> camisetasg;
+	grande = camisetasg * vg;
+	total = pequeno + media + grande;
+	cout << "O valor arrecadado sera: R$" << total << ",00";
+	return 0;
+}
+
+EXERCICIO 4
+
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	int prato,sobremesa,bebida,vb,vp,vs,cal;
+	cout << "\n   *** Prato principal ***   \n";
+	cout << "(1) Vegetariano";
+	cout << "(2) Peixe" ;
+	cout << "(3) Frango";
+	cout << "(4) Carne \n";
+	cout << "\n Insira o prato escolhido: ";
+	cin >> prato;
+	
+	if (prato==1){
+		vp = 180;
+	} else if (prato==2) {
+		vp = 230;		
+	} else if (prato==3) {
+		vp = 250;
+	} else {
+		vp = 350;
+	}
+	
+	cout << "\n   *** Sobremesa ***   \n";
+	cout << "(1) Abacaxi";
+	cout << "(2) Sorvete Diet" ;
+	cout << "(3) Mousse Diet";
+	cout << "(4) Mousse chocolate \n";
+	cout << "\n Insira a sobremesa escolhida: ";
+	cin >> sobremesa;
+	
+	if (sobremesa==1){
+		vs = 75;
+	} else if (sobremesa==2) {
+		vs = 110;		
+	} else if (sobremesa==3) {
+		vs = 170;
+	} else {
+		vs = 200;
+	}
+	
+	cout << "\n   *** Bebida ***   \n";
+	cout << "(1) Cha";
+	cout << "(2) Suco de Laranja" ;
+	cout << "(3) Suco de Melao";
+	cout << "(4) Refrigerante Diet \n";
+	cout << "\n Insira a bebida escolhida: ";
+	cin >> bebida;
+	
+	if (bebida==1){
+		vb = 20;
+	} else if (bebida==2) {
+		vb = 70;		
+	} else if (bebida==3) {
+		vb = 100;
+	} else {
+		vb = 65;
+	}
+	cal = vp+vs+vb;
+	cout << "As calorias ingeridas serao: " << cal << " cal";
+	return 0;
+}
+
+EXERCICIO 5
+
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int destino,tipo;
+	float vd,vt;
+	cout << " Seleciono o destino desejado:\n";
+	cout << " (1) Regiao Norte ";
+	cout << " (2) Regiao Nordeste ";
+	cout << " (3) Regiao Centro-Oeste ";
+	cout << " (4) Sul \n";
+	cin >> destino;
+	cout << " Somente ida selecione (1), ida e volta selecione (2) ";
+	cin >> tipo;
+	
+	if (destino==1 && tipo==1){
+		vd = 500;
+	} else if (destino==1 && tipo==2){
+		vd = 900;
+	} else if (destino==2 && tipo==1){
+		vd = 350;
+	} else if (destino==2 && tipo==2){
+		vd = 650;
+	} else if (destino==3 && tipo==1){
+		vd = 350;
+	} else if (destino==3 && tipo==2){
+		vd = 600;
+	} else if (destino==4 && tipo==1){
+		vd = 300;
+	} else {
+		vd = 550;
+	}
+	cout << "O valor da passagem sera R$" << vd;
+	return 0;
+}
+ 
+EXERCICIO 6 
+
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	 
+	float idade,peso,gotas;
+	
+	cout << "Digite a idade do paciente: \n";
+	cin >> idade;
+	cout << "Digite o peso do paciente: \n";
+	cin >> peso;
+	
+	if (idade>=12 && peso>=60){
+		gotas = (1000*20)/500;
+		cout << "Favor ingerir 1000mg de medicamento\n";
+		cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+			}else if (idade>=12 && peso<60){
+			gotas = (850*20)/500;
+			cout << "Favor ingerir 850mg de medicamento\n";
+			cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+				}else if (idade<12){
+				if (peso>=5 && peso<=9){
+				gotas = (125*20)/500;
+				cout << "Favor ingerir 125mg de medicamento\n";
+				cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+					}else if (peso>=9.1 && peso<=16){
+						gotas = (250*20)/500;
+						cout << "Favor ingerir 250mg de medicamento\n";
+						cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+						}else if (peso>=16.1 && peso<=24){
+							gotas = (375*20)/500;
+							cout << "Favor ingerir 375mg de medicamento\n";
+							cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+							}else if (peso>=24.1 && peso<=30){
+								gotas = (500*20)/500;
+								cout << "Favor ingerir mg de medicamento\n";
+								cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+								cout << "A dosagem a ser tomada e de 500mg";
+								}else{
+									gotas = (750*20)/500;
+									cout << "Favor ingerir mg de medicamento\n";
+									cout << "Favor ingerir " << gotas << " gotas de medicamento \n";
+									cout << "A dosagem a ser tomada e de 750mg";
+		}			
+	}
+	return 0;
+}
+
+
+EXERCICIO 7
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, num1 = 0, num2 = 1, final = 0;
+
+    cout << "Entre a quantidade de numeros: ";
+    cin >> num;
+
+    cout << "A sequencia fibonacci: ";
+
+    for (int i = 1; i <= num; ++i) {
+        // Prints the first two terms.
+        if(i == 1) {
+            cout << num1 << " | ";
+            continue;
+        }
+        if(i == 2) {
+            cout << num2 << " | ";
+            continue;
+        }
+        final = num1 + num2;
+        num1 = num2;
+        num2 = final;
+        
+        cout << final << " | ";
+    }
+    return 0;
+}
+
+EXERCICIO 8
+
+#include <iostream>
+
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+		long double final=0,num1=1,total,num2;
+	
+		for (int i=1; i<64; i++){
+				cout << "num " << i << " | \n";
+				final = num1*2;
+			    num1 = final;
+				cout << num1 << " | " ;
+        }
+        num2=num1;
+        total = num1+num2;
+        cout << "\n Total de graos: " << total;
+	return 0;
+}
+
+EXERCICIO 9
+
+#include <iostream>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int na,n,i,a,b,soma,soma1=0,soma2=0,total,mult;
+	
+	cout << "Insira o numero de elementos: \n";
+	cin >> na;
+	int vetor1[na];
+    for(int a=0; a<=na; a++){
+		cout << "Insira o valor do indice A: ";
+		cin >> vetor1[a];
+    }
+
+		
+	int vetor2[na];	
+    for(int b=0; b<=na; b++){
+		cout << "Insira o valor do indice B: ";
+		cin >> vetor2[b];
+    }
+    cout << "\n Numeros com indices A: ";
+	for(int i=0; i<=na; i++){
+    	cout << vetor1[i] << "|";
+    }
+    cout << "\n Numeros com indices B: ";
+    for(int i=0; i<=na; i++){	
+    	cout << vetor2[i] << "|";
+    }
+    
+    for(int i=0; i<=na; i++){
+     	soma1 = soma1 + vetor1[i];
+    }
+    cout << "\n A soma dos elementos A: "  << soma1;
+        
+   
+    for(int i=0; i<=na; i++){
+     	soma2 = soma2 + vetor2[i];
+    }
+    cout << "\n A soma dos elementos B: "  << soma2;
+    
+    total=soma2+soma1;
+    cout << "\n A soma dos vetores A e B: "  << total;
+    
+    total=0;
+    total=soma2-soma1;
+    cout << "\n A subtracao dos vetores B e A: "  << total;
+	
+    for(int i=0; i<=na; i++){
+    		if (vetor1[i]==vetor2[i]){
+    			mult=vetor1[i]*vetor2[i];
+			}
+    	soma=soma+mult;
+     	cout << "\n O produto escalar de A por B: "  << mult;
+    }
+	cout << "\n A soma total do produto escalar e: " << soma;
+	 
+	return 0;
+}
+
+EXERCICIO 10
+
+#include <iostream>
+	#include <locale>
+
+	using namespace  std;
+
+	int main(int argc, char** argv) {	
+	
+		int num;
+			cout << "Digite quantidade de vetores: ";
+			cin >> num;	
+			
+		int  vet1[num], vet2[num],maior=0,m=0,c=0,l=0;
+	
+		for(int i = 0; i < num; i++){
+			cout << "Digite o numero | " << i << " | ";
+			cin >> vet1[i];			
+			if(vet1[i] > maior){
+				maior = vet1[i];	
+			}
+		}
+			
+		for(m = 0; m < num; maior--){
+			for(int i=0; i < num; i++){
+				if(vet1[i] == maior){
+					vet2[(num-1)-m] = vet1[i];
+					m++;
+				}	
+			}
+		}
+
+		for(int i = 0; i < num;i++){
+			cout << "Ordem dos vetores: | " << i << " | " << vet2[i] << endl;
+		}	
+	return 0;
+	};
+
+	EXERCICIO 11
+
+#include <iostream>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+              
+ main(int argc, char** argv) {
+
+    int m[4][4],i,j,menor=9999,maior,pma,pme;
+    for(i=0;i<4;i++){
+        for(j=0;j<4;j++){
+        	printf("Digite o numero desejado: [%d] ",i);
+           	scanf("%d",&m[i][j]);
+	           	if(m[i][j]<menor){
+	            	menor=m[i][j];
+	           	}
+	           	
+	           	if(m[i][j]>maior){
+	            	maior=m[i][j];
+	           	}
+        }
+    }
+    printf("O menor numero e: [%d] ",menor);
+    printf("O maior numero e: [%d] ",maior);
+	return 0;
+}
+
+EXERCICIO 12
+
+	#include <iostream>
+	#include <locale>
+
+	using namespace  std;
+
+	int main(int argc, char** argv) {	
+
+	int maior, i, j, m=0, n=0;
+	int a[4][4],b[4][4];
+	//int a[4][4] = {{10,12,14,16},{2,4,6,8},{26,28,30,32},{18,20,22,24}}, b[4][4] = {{9,11,13,15},{1,3,5,7},{25,27,29,31},{17,19,21,23}};
+	int c[4][4];
+	
+	for (i=0; i<4; i++){
+		for (int j=0; j<4; j++){
+        	printf("Digite o numero da matriz A: [%d] ",j+1);
+           	scanf("%d",&a[i][j]);			
+		}	
+		cout << endl;	
+	}
+	
+	for (int i=0; i<4; i++){
+		for (int j=0; j<4; j++){
+        	printf("Digite o numero da matriz B: [%d] ",j+1);
+           	scanf("%d",&b[i][j]);    			
+		}	
+		cout << endl;	
+	}	
+	
+	for(i = 0; i < 4; i++){
+		for(j = 0; j < 4; j++){			
+			if( a[i][j] > maior  || b[i][j] > maior ){
+				if(a[i][j] > b[i][j]){
+					maior = a[i][j];
+				}else{
+					maior  = b[i][j];
+				}
+			}
+			
+		}
+	j=0;
+
+	}
+	for(m = 0; m < 4; m++){
+		for(n = 0; n < 4; n++){
+			for(i = 0; i < 4; i++){
+				for(j=0; j < 4; j++){
+					if(a[i][j] == maior ){	
+						c[m][n] = a[i][j];						
+					}			
+					if(b[i][j] == maior ){	
+						c[m][n] = b[i][j];
+					}		
+				}
+			}
+		maior  = maior - 1;
+		}
+		
+	}
+	
+
+	for(i = 0; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			cout << "Numero C e: |" << i+1 << "| , | " << j+1 << " | "<< c[i][j] << endl;
+		}
+		j=0;
+		cout << endl;
+	}	
+		return 0;
+	
+	};
+
+EXERCICIO 13
+
+	#include <iostream>
+	#include <locale>
+	#include <math.h>
+	using namespace  std;
+	
+	float vol(float raio){
+		float v = (1.333)*(3.14159)*(raio*raio*raio);
+		
+		return v;
+	}	
+
+	int main(int argc, char** argv) {		
+	float raio;
+		cout << "Digite o raio ";
+		cin >> raio;	
+	
+		cout << "O volume dessa esfera e: " << vol(raio);
+	return 0;	
+	};	
+
+EXERCICIO 14
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+void valor(int num1){
+	int verdade=0, num2;
+		for(int i = 0;i < num1 ; i++){
+			num2 = num1-i;
+			
+			if(num1 % num2== 0){
+				verdade = verdade+1;	 
+			 }			
+		}
+		if(verdade == 2){
+			cout << "Digite um numero: Verdadeiro" << endl;
+		}else{
+			cout << "Digite um numero: Falso" << endl;
+		}	
+}
+int main() {
+int num1;
+	
+do{
+	cout << "Digite um numero: " << endl;
+	cin >> num1;
+	valor(num1);	
+	}while
+	(num1 != 0);
+
+	return 0;
+}
+
+EXERCICIO 15
+
+#include <iostream>
+#include <math.h>
+
+using namespace  std;
+
+void perfeito(int num1){
+	int divisao, soma=0;
+	
+	for(int i=1; i<num1; i++){
+		divisao = num1 % i;
+		if(divisao == 0){
+			soma = soma + i;	
+		}
+	}
+	
+	if(soma == num1){
+		cout << "O numero " << num1 << " e perfeito";
+	}
+	
+	if(soma != num1){
+		cout << "O numero " << num1 << " nao e perfeito";
+	}	
+}
+
+int main(int argc, char** argv){
+	int num1;
+	cout << "Digite um numero e descubra se ele e perfeito: ";
+	cin >> num1;
+	perfeito(num1);
+	
+	return 0;
+}

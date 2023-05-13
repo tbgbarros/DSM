@@ -1,0 +1,41 @@
+Algoritmo "LER NUMEROS"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/09/2022
+Var
+// Seção de Declarações das variáveis
+NUM1, NUM2, NUM3, DESCREVER : inteiro
+nome: caracter
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+escreval ("DIGITE O NUMERO")
+leia(NUM1)
+escreval ("DIGITE O NUMERO")
+leia(NUM2)
+escreval ("DIGITE O NUMERO")
+leia(NUM3)
+
+
+se ( NUM1 > NUM2 ) e (NUM1 > NUM3)   entao
+   escreval( "NUMERO MAIOR É " , NUM1)
+
+senao
+
+se ( NUM2 > NUM1 ) e (NUM2 > NUM3)   entao
+   escreval( "NUMERO MAIOR É " , NUM2)
+
+senao
+
+se ( NUM3 > NUM2 ) e (NUM3 > NUM1)   entao
+   escreval( "NUMERO MAIOR É " , NUM3)
+
+
+fimse
+fimse
+fimse
+
+
+Fimalgoritmo

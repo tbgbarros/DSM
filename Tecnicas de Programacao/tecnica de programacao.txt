@@ -1,0 +1,12 @@
+1 - Na orientação a objetos, como voce define a relação existente entre os conceitos de 
+classe e objeto?
+Assiciação
+Agregação 
+Composição 
+Herança
+
+Em orientação a objetos, uma classe é um modelo ou uma "planta baixa" que descreve as características e comportamentos de um conjunto de objetos. Ela define os atributos (variáveis de instância) que cada objeto dessa classe pode ter e os métodos (comportamentos) que esses objetos podem realizar.
+
+Por outro lado, um objeto é uma instância (ou exemplar) de uma classe. Ele é criado a partir da classe e possui seus próprios valores para os atributos definidos pela classe. Cada objeto tem um estado único, que é determinado pelos valores de seus atributos, e pode executar os métodos definidos pela classe.
+
+Em resumo, podemos dizer que uma classe é uma descrição abstrata de um conjunto de objetos com propriedades e comportamentos comuns, enquanto um objeto é uma instância concreta de uma classe, que possui valores específicos para seus atributos e pode executar os métodos definidos pela classe.

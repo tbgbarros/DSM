@@ -1,0 +1,43 @@
+EX1
+
+SELECT a.nome, b.nome 
+FROM cliente a, representante b WHERE a.idrepresentante=b.id  
+
+EX2
+
+SELECT a.id, a.datemissao, b.nome, c.descricao
+FROM venda a, cliente b, formapagto c 
+WHERE a.idcliente = b.id
+AND a.idformapagto = c.id
+AND a.id = (SELECT MAX(id)
+				FROM venda)
+				
+EX3
+
+SELECT a.id, a.datemissao, b.nome, c.descricao
+FROM venda a, cliente b, formapagto c 
+WHERE a.idcliente = b.id
+AND a.idformapagto = c.id
+AND a.id < (SELECT MAX(id)
+			FROM venda)
+ORDER BY a.id
+
+EX4
+
+SELECT a.id, a.datemissao, b.nome, b.telefone
+FROM venda a, cliente b
+WHERE a.idcliente = b.id
+AND a.datemissao = (SELECT MIN(datemissao)
+				FROM venda)
+
+EX5
+
+SELECT a.id, a.datemissao, b.nome
+FROM venda a, cliente b, itemvenda c
+WHERE a.idcliente = b.id
+AND c.idvenda = c
+AND c.datemissao = (SELECT SUM IN (c.quantidade * c.precounitario)
+
+
+
+				

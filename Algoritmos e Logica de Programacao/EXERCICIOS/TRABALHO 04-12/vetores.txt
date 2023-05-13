@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// declarando um vetor UNIDIMENSIONAL
+	int vetor[5];
+	int soma;
+	
+	// inserindo dados no vetor
+	for(int i=0; i<=4; i++){	
+	//vetor[i] = 10;
+	cout << "informe um numero: ";
+	cin >> vetor[i];
+    }
+    
+    for(int i=0; i<=4; i++){
+       cout << vetor[i] << "|";
+    }
+    
+    // somando os valores do vetor
+    for(int i=0; i<=4; i++){
+     	soma = soma + vetor[i];
+    }
+    cout << "\n soma:" << soma;
+
+	return 0;
+}

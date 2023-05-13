@@ -1,0 +1,86 @@
+delimiter @
+CREATE or replace TRIGGER TRG_AtualizaEstoque
+	AFTER INSERT ON itemvenda 
+	FOR EACH ROW 
+	begin
+		UPDATE produto
+		SET estoque = estoque - NEW.quantidade
+		WHERE id = NEW.idproduto;	
+	END @
+delimiter mysql;	
+
+INSERT INTO itemvenda
+VALUES(10, 6, 5, 0.5);
+
+delimiter @
+CREATE or replace TRIGGER TRG_AtualizaEstoqueDel
+	AFTER DELETE ON itemvenda 
+	FOR EACH ROW 
+	begin
+		UPDATE produto
+		SET estoque = estoque + OLD.quantidade
+		WHERE id = OLD.idproduto;	
+	END @
+delimiter mysql;
+
+DELETE FROM itemvenda
+WHERE idvenda = 10
+AND idproduto = 1;
+
+DELIMITER $
+CREATE or replace TRIGGER TGR_BeforeInsert 
+BEFORE UPDATE ON itemvenda 
+for EACH ROW 
+BEGIN 
+	DECLARE qtdproduto INT;
+	SELECT estoque FROM produto 
+	WHERE id = OLD.idproduto 
+	INTO qtdproduto;
+
+	if (NEW.quantidade <= qtdproduto)  then
+		UPDATE produto
+		SET estoque = estoque - (NEW.quantidade - OLD.quantidade)
+		WHERE id = OLD.idproduto;	
+	ELSE 
+		SET NEW.quantidade = OLD.quantidade;
+	END if;				
+END $
+DELIMITER ;
+
+
+-----------------------------------
+
+nilton exercicio
+
+[22:00] NILTON CESAR SACCOTrigger - Before Update
+    
+delimiter $
+CREATE OR REPLACE TRIGGER TRG_ATUALIZACAO
+BEFORE UPDATE ON itemvenda
+FOR EACH ROW
+BEGIN
+  DECLARE qtdeestoque INT;
+  
+  SELECT estoque FROM produto 
+  where id = old.idproduto INTO qtdeestoque;
+  
+  if (NEW.quantidade > OLD.quantidade) then
+    if (qtdeestoque < NEW.quantidade) then
+      set NEW.quantidade = OLD.quantidade;
+    else
+        UPDATE produto SET estoque = estoque - (NEW.quantidade-OLD.quantidade)
+         WHERE id = OLD.idproduto;    
+    END if;
+  ELSE 
+    UPDATE produto SET estoque = estoque + (OLD.quantidade-NEW.quantidade)
+     WHERE id = OLD.idproduto; 
+  END if;
+
+
+ END $
+delimiter ;
+
+
+
+
+

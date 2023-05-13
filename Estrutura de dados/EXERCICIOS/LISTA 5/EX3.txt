@@ -1,0 +1,3 @@
+O que significa alocação estática de memória para um conjunto de elementos?
+
+R: A alocação estática ocorre quando são declaradas variáveis globais ou estáticas; geralmente usa a área Data. A alocação automática ocorre quando são declaradas variáveis locais e parâmetros de funções. O espaço para a alocação dessas variáveis é reservado quando a função é invocada, e liberado quando a função termina.

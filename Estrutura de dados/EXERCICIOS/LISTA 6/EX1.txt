@@ -1,0 +1,2 @@
+1 - Uma fila é uma estrutura de dados dinâmica que admite remoção de elementos e inserção de novos objetos.
+EXEMPLO: Uma fila de banco com varias pessoas, que ao ser atendido é chamado o primeiro da fila fazendo com que todos andem uma casa trazendo o proximo para primeiro da fila.

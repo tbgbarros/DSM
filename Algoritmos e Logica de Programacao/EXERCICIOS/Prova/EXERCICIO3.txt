@@ -1,0 +1,32 @@
+Algoritmo "exercicio3"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 19/10/2022
+Var
+// Seção de Declarações das variáveis 
+cont,num,tmp,melhorVolta,numeroVolta:inteiro
+tmp2,tmpMedia, media:real
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreval("Escreva a quantidade de voltas")
+leia(num)
+melhorVolta := 0
+tmp2 :=0
+
+para cont de 1 ate num passo 1 faca
+     escreval("Digite o tempo da volta respectiva", cont)
+     leia(tmp)
+     tmpMedia := (tmpMedia + tmp )
+     se  (tmp >  melhorVolta) entao
+     melhorVolta := tmp
+     numeroVolta := cont
+     //escreval("Melhor tempo: ", melhorVolta , ", na volta" ,cont )
+     fimse
+    // tmp2 := (tmp + tmp2) / num
+     fimpara
+     escreval ("O melhor tempo foi", melhorVolta , ", na volta", numeroVolta )
+     media := tmpMedia / num
+     escreval ("A media de tempo foi", media)
+Fimalgoritmo

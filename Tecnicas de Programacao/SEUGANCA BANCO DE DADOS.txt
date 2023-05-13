@@ -1,0 +1,20 @@
+criando usuario 
+
+ CREATE USER 'fatec'@'localhost' 
+ IDENTIFIED BY 'dificil';
+ 
+ privilegios
+ 
+  GRANT ALL PRIVILEGES ON *.* TO 'fatec'@'localhost';
+  
+ tabelas selecionadas 
+  GRANT SELECT ON empresa.cliente TO 'thiago'@'localhost';
+  
+  //consegue puxar os dados
+  SELECT a.* 
+FROM cliente a, venda b
+WHERE a.id=b.idcliente;
+
+//delete 
+ REVOKE DELETE ON empresa.cargo FROM 'thiago'@'localhost';
+ DELETE FROM cargo

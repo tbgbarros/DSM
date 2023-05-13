@@ -1,0 +1,46 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/09/2022
+Var
+// Seção de Declarações das variáveis 
+leitura1, leitura2, consumo, valorconta : real
+nome: caracter
+codigo, tipoligacao : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreval ("Digite nome cadstrado")
+leia(nome)
+escreval("Digite o codigo do relogio")
+leia (codigo)
+escreval("Digite a leitura atual do relogio")
+leia (leitura1)
+escreval("Dgite a leitura anterior")
+leia (leitura2)
+escreval("Informe o tipo de ligacao")
+escreval("1 - Residencial")
+escreval("2 - Comercio")
+escreval("3 - industria")
+leia (tipoligacao)
+
+
+consumo := leitura1 - leitura2
+
+se(tipoligacao = 1) entao
+   valorconta := consumo * 0.6
+   senao
+        se(tipoligacao = 2) entao
+            valorconta := consumo * 0.48
+   senao
+        se(tipoligacao = 3) entao
+        valorconta := consumo *  1.29
+
+        fimse
+   fimse
+fimse
+escreval("olá ", nome ," o consumo é " , consumo , " ovalor da conta é" , valorconta)
+
+Fimalgoritmo

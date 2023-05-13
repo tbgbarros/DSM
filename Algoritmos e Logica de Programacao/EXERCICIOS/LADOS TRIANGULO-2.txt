@@ -1,0 +1,43 @@
+Algoritmo "LER NUMEROS"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/09/2022
+Var
+// Seção de Declarações das variáveis
+NUM1, NUM2, NUM3, SOMA : inteiro
+nome: caracter
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+escreval ("DIGITE O NUMERO UM")
+leia(NUM1)
+escreval ("DIGITE O NUMERO DOIS")
+leia(NUM2)
+escreval ("DIGITE O NUMERO TRES")
+leia(NUM3)
+
+   se ((NUM1>abs(NUM2-NUM3)) e (NUM1<NUM2+NUM3)) e ((NUM2>abs(NUM1-NUM3)) e (NUM2<NUM1+NUM3)) e ( (NUM3 > abs (NUM1 - NUM2)) e (NUM3<NUM1+NUM2)) entao
+   
+   se ( NUM1 = NUM2 ) e (NUM2 = NUM3) entao
+      escreval( "O TRIANGULO É EQUILATERO ")
+   senao
+
+   se ( NUM1 <> NUM2 ) ou (NUM2 <> NUM3) ou ( NUM1 <> NUM3)entao
+      escreval( "O TRIANGULO  É ESCALENO")
+   senao
+   
+   se ( NUM1 = NUM2 ) xou (NUM2 = NUM3) xou ( NUM1 = NUM3)entao
+      escreval( "O TRIANGULO  É ISOCELES")
+   senao
+fimse
+fimse
+fimse
+senao
+     escreval ("NUMEROS MERDA")
+     fimse
+     
+
+
+Fimalgoritmo

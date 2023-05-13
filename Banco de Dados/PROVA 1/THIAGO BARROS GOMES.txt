@@ -1,0 +1,53 @@
+4 - 
+SELECT  p.id, p.nome, SUM(e.valor)
+FROM exame e INNER JOIN  paciente p
+ON e.idpaciente=p.id 
+GROUP BY e.idpaciente
+
+5 - 
+SELECT COUNT(e.idpaciente), p.nome 
+FROM exame e, paciente p 
+WHERE e.idpaciente = p.id 
+GROUP BY idpaciente LIMIT 2;
+
+6 - 
+SELECT COUNT(a.crm), m.nome, m.CRM 
+FROM atendimento a, medico m 
+WHERE a.crm = m.CRM 
+GROUP BY a.crm;
+
+7 - 
+SELECT nome, id 
+FROM paciente 
+WHERE id 
+NOT IN (SELECT idpaciente FROM atendimento);
+
+8 - 
+SELECT idpaciente, SUM(valor)
+FROM exame 
+WHERE idpaciente = 5 
+GROUP BY idpaciente;
+
+9 - 
+CREATE USER 'thiago'@'localhost' 
+   IDENTIFIED BY 'thiago';
+
+A - 
+ GRANT SELECT, INSERT, UPDATE ,DELETE ON consulta.medico TO 'thiago'@'localhost';
+ GRANT SELECT, INSERT, UPDATE ,DELETE ON consulta.paciente TO 'thiago'@'localhost';
+ GRANT SELECT, INSERT, UPDATE ,DELETE ON consulta.atendimento TO 'thiago'@'localhost';
+B - 
+ GRANT ALL PRIVILEGES ON cosulta.exame TO 'thiago'@'localhost';
+
+10 - 
+delimiter @
+     CREATE OR REPLACE TRIGGER TRG_atendimento
+     AFTER INSERT ON atendimento
+     FOR EACH ROW
+     BEGIN
+
+     INSERT INTO exame
+     VALUES ( new.id , 'HEMOGRAMA' ,20.00,
+     NEW.idpaciente);
+     END @
+delimiter ;
